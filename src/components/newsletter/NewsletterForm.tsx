@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { decode } from "html-entities";
 
-const NewsletterForm = ({ status, message, onValidated }) => {
-  const [error, setError] = useState(null);
+const NewsletterForm = ({ status, message, onValidated }: any) => {
+  const [error, setError] = useState("");
   const [email, setEmail] = useState("");
 
   /**
@@ -10,9 +10,9 @@ const NewsletterForm = ({ status, message, onValidated }) => {
    *
    * @return {{value}|*|boolean|null}
    */
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = (event: any) => {
     event.preventDefault();
-    setError(null);
+    setError("");
 
     if (!email) {
       setError("Please enter a valid email address");
@@ -38,14 +38,14 @@ const NewsletterForm = ({ status, message, onValidated }) => {
    *
    * @param event
    */
-  const handleInputKeyEvent = (event) => {
-    setError(null);
+  const handleInputKeyEvent = (event: any) => {
+    setError("");
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
       // Cancel the default action, if needed
       event.preventDefault();
       // Trigger the button element with a click
-      handleFormSubmit();
+      handleFormSubmit(event);
     }
   };
 
@@ -55,7 +55,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
    * @param {String} message
    * @return {null|*}
    */
-  const getMessage = (message) => {
+  const getMessage = (message: string) => {
     if (!message) {
       return null;
     }
@@ -88,18 +88,10 @@ const NewsletterForm = ({ status, message, onValidated }) => {
         <div className="newsletter-form-info">
           {status === "sending" && <div className="sending">Sending...</div>}
           {status === "error" || error ? (
-            <div
-              className="newsletter-form-error"
-              dangerouslySetInnerHTML={{
-                __html: error || getMessage(message),
-              }}
-            />
+            <div className="newsletter-form-error">{getMessage(message)}</div>
           ) : null}
           {status === "success" && status !== "error" && !error && (
-            <div
-              className="success"
-              dangerouslySetInnerHTML={{ __html: decode(message) }}
-            />
+            <div className="success">{message}</div>
           )}
         </div>
       </form>
