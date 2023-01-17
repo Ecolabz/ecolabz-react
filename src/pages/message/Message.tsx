@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 import { q } from "../../App";
 
-const Quote = () => {
+const Message = () => {
   const [quotes, setQuotes] = useState<any>([]);
 
   useEffect(() => {
@@ -84,7 +84,7 @@ const Quote = () => {
         ) : (
           quotes.map((data: any) => (
             <div className="sub-container" key={data.id}>
-              <Link to={`/quote/${data.id}`}>
+              <Link to={`/message/${data.id}`}>
                 <div className="row">
                   <div className="col-1">
                     <div className="sub-text">
@@ -118,4 +118,4 @@ const Quote = () => {
   );
 };
 
-export default Quote;
+export default Message;

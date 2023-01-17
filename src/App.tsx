@@ -19,14 +19,14 @@ import Register from "./pages/Register";
 import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
 
-// Error component for quote detail page
+// Error component for message detail page
 import Error from "./components/Error";
 
 // importing aos
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Quote from "./pages/quote/Quote";
-import QuoteDetail, { fetchSingleQuote } from "./pages/quote/[slug]";
+import Message from "./pages/message/Message";
+import MessageDetail, { fetchSingleQuote } from "./pages/message/[slug]";
 
 //  Importing firebase
 import { initializeApp } from "firebase/app";
@@ -66,12 +66,12 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/quote" element={<Quote />} />
-        <Route path="*" element={<NotFound/>} />
+        <Route path="/message" element={<Message />} />
+        <Route path="*" element={<NotFound />} />
         <Route
-          path="/quote/:slug"
+          path="/message/:slug"
           loader={fetchSingleQuote}
-          element={<QuoteDetail />}
+          element={<MessageDetail />}
           errorElement={<Error />}
         />
         <Route path="/login" element={<Login />} />

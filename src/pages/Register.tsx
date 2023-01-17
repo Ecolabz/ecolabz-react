@@ -32,7 +32,7 @@ const Register = () => {
         setUserData(cred.user.email);
         toast("Successfully registered!");
         window.localStorage.setItem("currentUser", `${cred.user.email}`);
-        navigate("/quote");
+        navigate("/message");
       });
     } catch (error: any) {
       throw Error(error.Message);

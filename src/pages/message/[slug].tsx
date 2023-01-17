@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const QuoteDetail = () => {
+const MessageDetail = () => {
   const userData: any = useLoaderData();
   const { slug }: any = useParams();
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const QuoteDetail = () => {
       progress: undefined,
       theme: "light",
     });
-    navigate("/quote");
+    navigate("/message");
   };
 
   return (
@@ -31,8 +31,8 @@ const QuoteDetail = () => {
       <div className="detail-page">
         <div>
           <div className="text-center my-3">
-            <Link className="btn btn-outline-info" to="/quote">
-              Quotes
+            <Link className="btn btn-outline-info" to="/message">
+              Messages
             </Link>
           </div>
           <div className="detail-card">
@@ -72,7 +72,7 @@ const QuoteDetail = () => {
   );
 };
 
-export default QuoteDetail;
+export default MessageDetail;
 
 export const fetchSingleQuote = async ({ params }: any) => {
   const docRef = doc(db, `${import.meta.env.VITE_COLLECTION}`, params.slug);

@@ -31,7 +31,7 @@ const Login = () => {
         setUserData(cred.user.email);
         toast("Successfully logged in!");
         window.localStorage.setItem("currentUser", `${cred.user.email}`);
-        navigate("/quote");
+        navigate("/message");
       })
       .catch(() => {
         setLoginError("An error occured, please check credentials");

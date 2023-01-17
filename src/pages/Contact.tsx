@@ -6,36 +6,6 @@ import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
 
 const Contact = () => {
-  // Services Type
-  // interface ServiceType {
-  //   name: string;
-  //   checked: boolean;
-  // }
-
-  // Services Array
-  // const allServices: ServiceType[] = [
-  //   {
-  //     name: "Development",
-  //     checked: false,
-  //   },
-  //   {
-  //     name: "Web Design",
-  //     checked: false,
-  //   },
-  //   {
-  //     name: "Marketing",
-  //     checked: false,
-  //   },
-  //   {
-  //     name: "Branding",
-  //     checked: false,
-  //   },
-  //   {
-  //     name: "SEO",
-  //     checked: false,
-  //   },
-  // ];
-
   const [detail, setDetail] = useState({
     fullname: "",
     email: "",
@@ -43,26 +13,6 @@ const Contact = () => {
     message: "",
   });
   const [success, setSuccess] = useState(false);
-
-  // let [services, setServices] = useState(allServices);
-  // const [finalSelectedService, setFinalSelectedService] = useState<
-  //   any | null
-  // >();
-
-  // Services Checkbox Handler
-  // const servicesHandler = (index: any) => {
-  //   setServices(
-  //     services.map((serv, currentIndex) =>
-  //       currentIndex === index ? { ...serv, checked: !serv.checked } : serv
-  //     )
-  //   );
-  // };
-
-  // useEffect function from React to set updated services array
-  // useEffect(() => {
-  //   const realChecked = services.filter((data) => data.checked === true);
-  //   setFinalSelectedService(realChecked);
-  // }, [services]);
 
   const clearFields = () => {
     setDetail({
@@ -176,34 +126,6 @@ const Contact = () => {
                     onChange={handleChange}
                   />
                 </div>
-
-                {/* <div className="services">
-                  <label htmlFor="services" className="mt-4">
-                    What services do you need help with?
-                  </label>
-                  <div className="service-list">
-                    {services.map((service, index) => (
-                      <div className="form-item" key={service.name}>
-                        <input
-                          type="checkbox"
-                          id={`checkbox-${index}`}
-                          className="form-input"
-                          value={service.name}
-                          name="services"
-                          onChange={() => servicesHandler(index)}
-                        />
-                        <label
-                          htmlFor={`checkbox-${index}`}
-                          className="form-label"
-                        >
-                          <div className="form-content">
-                            <span className="form-name">{service.name}</span>
-                          </div>
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div> */}
 
                 <label htmlFor="message" className="mt-4">
                   What can we help you with
