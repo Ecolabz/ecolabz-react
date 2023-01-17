@@ -26,6 +26,8 @@ const TheNavBar = () => {
 
   window.addEventListener("scroll", fixedHeader);
 
+  const blogLink = "https://ecolabz.medium.com";
+
   return (
     <>
       {/* Navigation */}
@@ -61,6 +63,17 @@ const TheNavBar = () => {
               <NavLink className="nav-link" to="/team">
                 Team
               </NavLink>
+            </li>
+
+            <li className="nav-item" onClick={menuHandler}>
+              <a
+                href={blogLink}
+                target="_blank"
+                rel="noreferrer"
+                className="nav-link"
+              >
+                Blog
+              </a>
             </li>
             <li className="nav-item" onClick={menuHandler}>
               <NavLink className="nav-link" to="/contact">
