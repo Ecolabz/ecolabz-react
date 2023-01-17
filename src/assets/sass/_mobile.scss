@@ -1,4 +1,21 @@
 @media screen and(max-width: 480px) {
+  nav {
+    .nav-item-container {
+      .nav-item-list {
+        display: none;
+
+        &.active {
+          width: 100%;
+          height: 29rem;
+
+          @include flexItem(column, center);
+          align-items: flex-start;
+          overflow: auto;
+        }
+      }
+    }
+  }
+
   .hero-section {
     position: relative;
 
