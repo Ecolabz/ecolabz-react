@@ -3,6 +3,7 @@ import Haraka from "../assets/images/haraka.png";
 import Bluuchip from "../assets/images/bluuchip.png";
 import Ecotix from "../assets/images/ecotix.png";
 import Ecotourz from "../assets/images/ecotourz.png";
+import JobsInAfrica from "../assets/images/jobsinafrica.png";
 
 
 const PortfolioSection = () => {
@@ -11,6 +12,7 @@ const PortfolioSection = () => {
   const ecotixLink = "https://ecotix.africa";
   const bluuchipLink = "https://bluuchip.com";
   const ecotourzLink = "https://ecotourz.com";
+  const jobsinafricaLink = "https://jobsinafrica.io";
 
   return (
     <>
@@ -119,6 +121,27 @@ const PortfolioSection = () => {
                   rel="noreferrer"
                 >
                   Visit Ecotourz
+                </a>
+              </div>
+            </div>
+
+            <div className="project" data-aos="zoom-in" data-aos-delay="2000">
+              <img src={JobsInAfrica} alt="jobsinafrica" />
+              <div className="content">
+                <h5>Jobsinafrica</h5>
+                <div className="brand">Freelance</div>
+                <p>
+                  Empower your business and career growth with Jobsinafrica, the
+                  Fiverr for Africa with lower fees and more earning potential
+                  for freelancers.
+                </p>
+                <a
+                  className="link"
+                  href={jobsinafricaLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit Jobsinafrica
                 </a>
               </div>
             </div>

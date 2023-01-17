@@ -12,8 +12,8 @@ const QuoteDetail = () => {
   const navigate = useNavigate();
 
   const delHandler = async () => {
-    await deleteDoc(doc(db, `${process.env.REACT_APP_COLLECTION}`, slug));
-    toast("Quote deleted", {
+    await deleteDoc(doc(db, `${import.meta.env.VITE_COLLECTION}`, slug));
+    toast("Message deleted successfully!", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -62,7 +62,6 @@ const QuoteDetail = () => {
               </div>
             </div>
 
-
             <div className="divider"></div>
 
             <button onClick={delHandler}>Delete</button>
@@ -76,7 +75,7 @@ const QuoteDetail = () => {
 export default QuoteDetail;
 
 export const fetchSingleQuote = async ({ params }: any) => {
-  const docRef = doc(db, `${process.env.REACT_APP_COLLECTION}`, params.slug);
+  const docRef = doc(db, `${import.meta.env.VITE_COLLECTION}`, params.slug);
   const postSnapshot = getDoc(docRef);
 
   try {

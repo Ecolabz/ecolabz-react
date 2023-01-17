@@ -3,6 +3,7 @@ import FooterLogo from "../assets/icons/footer-logo.svg";
 import Instagram from "../assets/icons/instagram.svg";
 import LinkedIn from "../assets/icons/linkedin.svg";
 import Twitter from "../assets/icons/twitter.svg";
+import Medium from "../assets/icons/medium.svg";
 import LocationInfo from "../assets/icons/location.svg";
 import Email from "../assets/icons/email.svg";
 import Phone from "../assets/icons/phone.svg";
@@ -16,6 +17,7 @@ const Footer = () => {
   const instagramLink = "https://instagram.com/ecolabz";
   const twitterLink = "https://twitter.com/ecolabz";
   const linkedIn = "https://linkedin.com/company/ecolabz-io";
+  const mediumLink = "https://ecolabz.medium.com";
 
   return (
     <>
@@ -56,8 +58,16 @@ const Footer = () => {
                   >
                     <img src={LinkedIn} alt="LinkedIn" />
                   </a>
-                  <a href={twitterLink} target="_blank" rel="noreferrer">
+                  <a
+                    className="me-4"
+                    href={twitterLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img src={Twitter} alt="Twitter" />
+                  </a>
+                  <a href={mediumLink} target="_blank" rel="noreferrer">
+                    <img src={Medium} alt="Medium" />
                   </a>
                 </div>
               </div>

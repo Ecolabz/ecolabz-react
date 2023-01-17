@@ -97,7 +97,7 @@ const Contact = () => {
       createdAt: serverTimestamp(),
     })
       .then(() => {
-        toast.info("Quote submitted successfully!", {
+        toast.info("Message sent successfully!", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
