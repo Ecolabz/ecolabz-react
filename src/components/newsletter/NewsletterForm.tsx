@@ -26,7 +26,12 @@ const NewsletterForm = ({ status, message, onValidated }: any) => {
   };
 
   useEffect(() => {
-    if (status === "success") clearField();
+    if (status === "success") {
+      clearField();
+      setTimeout(() => {
+        window.location.reload();
+      }, 4000);
+    }
   }, [status]);
 
   const clearField = () => {

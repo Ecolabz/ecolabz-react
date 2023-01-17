@@ -17,6 +17,7 @@ import AboutUs from "./pages/AboutUs";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Team from "./pages/Team";
+import NotFound from "./pages/NotFound";
 
 // Error component for quote detail page
 import Error from "./components/Error";
@@ -66,6 +67,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/team" element={<Team />} />
         <Route path="/quote" element={<Quote />} />
+        <Route path="*" element={<NotFound/>} />
         <Route
           path="/quote/:slug"
           loader={fetchSingleQuote}
