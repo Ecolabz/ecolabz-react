@@ -1,4 +1,6 @@
 import ContactSection from "../components/ContactSection";
+import Frame from "../assets/images/Frame.png";
+import TeamSection from "../components/TeamSection";
 
 const AboutUs = () => {
   return (
@@ -8,18 +10,7 @@ const AboutUs = () => {
 
         <div className="content">
           <p className="text-lead">
-            The team at Ecolabz is made of entrepreneurs, designers, developers
-            and business developers with different origins and backgrounds.
-          </p>
-          <p className="text-lead">
-            We’re a team of creative business builders brought together by a
-            passion for building innovative products based on novel ideas and
-            turning them into profitable business solutions.
-          </p>
-          <p className="text-lead">
-            We run each start-up idea through vigorous data-driven processes; we
-            build fast, kill bad ideas faster, and focus our energy and
-            resources on the ideas with a product market fit.
+            We subject every startup idea to rigorous data-driven processes, emphasizing swift execution, rapid elimination of non-viable ideas, and channeling our energy and resources towards ideas that demonstrate a strong product-market fit.
           </p>
         </div>
         <div className="divider"></div>
@@ -66,12 +57,12 @@ const AboutUs = () => {
           >
             <h5>Branding</h5>
             <p>
-              We create custom SaaS solutions that are market ready,
-              comprehensive, and customer friendly for increased business
-              productivity.
+              We specialize in tailoring branding solutions that are meticulously crafted to be market-ready, comprehensive, and user-friendly, ensuring a seamless boost in business productivity.
             </p>
           </div>
         </div>
+        <img src={Frame} alt="Divider Frame" className="w-100"  />
+        <TeamSection />
       </div>
       <ContactSection />
     </>
