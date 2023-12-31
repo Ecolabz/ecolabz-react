@@ -10,6 +10,11 @@ const Contact = () => {
     fullname: "",
     email: "",
     phone_no: "",
+    ui_ux: false,
+    web_dev: false,
+    data_analysis: false,
+    branding: false,
+    seo: false,
     message: "",
   });
   const [success, setSuccess] = useState(false);
@@ -19,6 +24,11 @@ const Contact = () => {
       fullname: "",
       email: "",
       phone_no: "",
+      ui_ux: false,
+      web_dev: false,
+      data_analysis: false,
+      branding: false,
+      seo: false,
       message: "",
     });
   };
@@ -34,6 +44,12 @@ const Contact = () => {
 
     setDetail((prev) => ({ ...prev, [name]: value }));
   };
+  
+  const handleCheckbox = (e: any) => {
+    const { name, checked } = e.target;
+
+    setDetail((prev) => ({ ...prev, [name]: checked }));
+  }
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -43,6 +59,11 @@ const Contact = () => {
       name: detail.fullname,
       email: detail.email,
       phone_no: detail.phone_no,
+      ui_ux: detail.ui_ux,
+      web_dev: detail.web_dev,
+      data_analysis: detail.data_analysis,
+      branding: detail.branding,
+      seo: detail.seo,
       message: detail.message,
       createdAt: serverTimestamp(),
     })
@@ -72,22 +93,22 @@ const Contact = () => {
         <div className="row align-items-start justify-content-between">
           <div className="col-lg-6">
             <div className="contact-us">Contact us</div>
-            <h2>Send us an Email Today Don’t be shy</h2>
-            <div className="box-content">
+            <h2>Send us an Email</h2>
+            {/* <div className="box-content">
               <p className="text-lead">
                 We’re here to help and happy to answer any questions
               </p>
-            </div>
+            </div> */}
           </div>
           <div className="col-lg-6">
             <div className="login">
               <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Your Name</label>
                 <div className="form-group">
                   <input
                     type="text"
                     className="form-control-input "
-                    placeholder="(First name, Last name)"
+                    placeholder="Enter name here..."
                     required
                     id="name"
                     value={detail.fullname}
@@ -127,8 +148,74 @@ const Contact = () => {
                   />
                 </div>
 
+                <label htmlFor="services" className="mt-4">
+                  Services
+                </label>
+                <div className="form-check-group">
+                  <div className="form-check">
+                    <label className="form-check-label" htmlFor="ui_ux">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      name="ui_ux"
+                      onChange={handleCheckbox}
+                      id="ui_ux"
+                    />
+                      UI/UX design
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <label className="form-check-label" htmlFor="web_dev">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      name="web_dev"
+                      onChange={handleCheckbox}
+                      id="web_dev"
+                    />
+                      Web development
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <label className="form-check-label" htmlFor="data_analysis">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      name="data_analysis"
+                      onChange={handleCheckbox}
+                      id="data_analysis"
+                    />
+                      Data analysis
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <label className="form-check-label" htmlFor="branding">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      name="branding"
+                      onChange={handleCheckbox}
+                      id="branding"
+                    />
+                      Branding
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <label className="form-check-label" htmlFor="seo">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      name="seo"
+                      onChange={handleCheckbox}
+                      id="seo"
+                    />
+                      SEO
+                    </label>
+                  </div>
+                </div>
+
                 <label htmlFor="message" className="mt-4">
-                  What can we help you with
+                  Message
                 </label>
                 <div className="form-group">
                   <textarea
