@@ -9,10 +9,19 @@ const AboutSection = () => {
       <div className="about-section">
         <h1 data-aos="fade-up">We Are Not Your Regular Startup Studio</h1>
         <p className="subtitle-text" data-aos="fade-up">
-          We rapidly test new startup ideas by combining creativity with
-          technical acumen to help business grow.
+          We fuse creativity with technical prowess to rapidly test and bring innovative ideas to market, while efficiently eliminating concepts that don't resonate.
         </p>
-
+        <div className="box-group" data-aos="fade-up">
+          <div className="box">
+            Swift Prototyping
+          </div>
+          <div className="box">
+            Agile Ideation
+          </div>
+          <div className="box">
+            Market Launch
+          </div>
+        </div>
         <div className="about-ecolabz">
           <div className="row align-items-start justify-content-between py-5">
             <div
@@ -22,8 +31,7 @@ const AboutSection = () => {
               <img src={TailorMadeDev} alt="We Ideate It" />
               <h5>We Ideate It.</h5>
               <p>
-                All great products begin with an idea as we identify the biggest
-                opportunities by studying the greatest problems
+                All exceptional products originate from an idea, and we discern significant opportunities by delving into formidable challenges. Innovation isn't exclusive to us entrepreneurs aspiring to shape a business concept.
               </p>
             </div>
 
@@ -33,11 +41,9 @@ const AboutSection = () => {
               data-aos-delay="300"
             >
               <img src={CrossDeviceComp} alt="We Build It" />
-              <h5>We Build It.</h5>
+              <h5>Prototyping and Validation.</h5>
               <p>
-                We validate our ideas by quickly building a prototype that tests
-                the product-market fit early and if an idea fails, we move on to
-                the next.
+                Our ideas undergo swift validation through the creation of prototypes, ensuring an early assessment of product-market fit. If an idea doesn't resonate, we swiftly pivot to the next.
               </p>
             </div>
             <div
@@ -46,10 +52,9 @@ const AboutSection = () => {
               data-aos-delay="600"
             >
               <img src={Testing} alt="We Scale The Product" />
-              <h5>We Scale The Product.</h5>
+              <h5>Product Scaling.</h5>
               <p>
-                Once an idea has been thoroughly vetted, we work closely with a
-                co-founder to spin off the idea and bring it to market.
+              Upon meticulous vetting, we collaborate closely with a co-founder to launch and scale the idea into the market.
               </p>
             </div>
           </div>
