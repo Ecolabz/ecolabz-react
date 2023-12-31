@@ -41,11 +41,6 @@ const TheNavBar = () => {
           {/* End of Logo */}
 
           <ul ref={navItem} className="nav-item-list">
-            <li className="nav-item" onClick={menuHandler}>
-              <NavLink to="/" className="nav-link">
-                Home
-              </NavLink>
-            </li>
 
             <li className="nav-item" onClick={menuHandler}>
               <NavLink className="nav-link" to="/about-us">
@@ -60,24 +55,8 @@ const TheNavBar = () => {
             </li>
 
             <li className="nav-item" onClick={menuHandler}>
-              <NavLink className="nav-link" to="/team">
-                Team
-              </NavLink>
-            </li>
-
-            <li className="nav-item" onClick={menuHandler}>
-              <a
-                href={blogLink}
-                target="_blank"
-                rel="noreferrer"
-                className="nav-link"
-              >
-                Blog
-              </a>
-            </li>
-            <li className="nav-item" onClick={menuHandler}>
               <NavLink className="nav-link" to="/contact">
-                Contact us <img src={ArrowDown} alt="" />
+                Get in Touch <img src={ArrowDown} alt="" />
               </NavLink>
             </li>
           </ul>
