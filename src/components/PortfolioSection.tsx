@@ -1,21 +1,15 @@
 import Nketsang from "../assets/images/nketsang.png";
-import Ecojobz from "../assets/images/ecojobz.png";
 import Haraka from "../assets/images/haraka.png";
 import Bluuchip from "../assets/images/bluuchip.png";
 import Fraqvest from "../assets/images/fraqvest.png";
-import Ecotix from "../assets/images/ecotix.png";
-import Ecotourz from "../assets/images/ecotourz.png";
 import JobsInAfrica from "../assets/images/jobsinafrica.png";
 
 
 const PortfolioSection = () => {
-  const nketsangLink = "https://nketsang.africa";
-  const ecojobzLink = "https://ecojobz.com";
+  const nketsangLink = "https://nketsang.ventures";
   const harakaShopLink = "https://haraka.shop";
-  const ecotixLink = "https://ecotix.africa";
   const bluuchipLink = "https://bluuchip.com";
   const fraqvestLink = "https://fraqvest.com";
-  const ecotourzLink = "https://ecotourz.com";
   const jobsinafricaLink = "https://jobsinafrica.io";
 
   return (
@@ -38,7 +32,7 @@ const PortfolioSection = () => {
                 </p>
                 <a
                   className="link"
-                  href={ecojobzLink}
+                  href={nketsangLink}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -98,7 +92,7 @@ const PortfolioSection = () => {
                 </p>
                 <a
                   className="link"
-                  href={ecotixLink}
+                  href={fraqvestLink}
                   target="_blank"
                   rel="noreferrer"
                 >
