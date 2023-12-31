@@ -1,37 +1,40 @@
+import Nketsang from "../assets/images/nketsang.png";
 import Ecojobz from "../assets/images/ecojobz.png";
 import Haraka from "../assets/images/haraka.png";
 import Bluuchip from "../assets/images/bluuchip.png";
+import Fraqvest from "../assets/images/fraqvest.png";
 import Ecotix from "../assets/images/ecotix.png";
 import Ecotourz from "../assets/images/ecotourz.png";
 import JobsInAfrica from "../assets/images/jobsinafrica.png";
 
 
 const PortfolioSection = () => {
+  const nketsangLink = "https://nketsang.africa";
   const ecojobzLink = "https://ecojobz.com";
   const harakaShopLink = "https://haraka.shop";
   const ecotixLink = "https://ecotix.africa";
   const bluuchipLink = "https://bluuchip.com";
+  const fraqvestLink = "https://fraqvest.com";
   const ecotourzLink = "https://ecotourz.com";
   const jobsinafricaLink = "https://jobsinafrica.io";
 
   return (
     <>
       <div className="portfolio-section">
-        <h1 data-aos="fade-up">Recent projects that we just launched</h1>
+        <h1 data-aos="fade-up">Latest Projects We have Worked on</h1>
         <p className="subtitle-text" data-aos="fade-down" data-aos-delay="500">
-          Here's a small selection of the most recent projects we've launched.
+          Explore a curated glimpse of our projects, showcasing the diversity and innovation that define our portfolio.
         </p>
 
         <div className="portfolio-container">
           <div className="row-item">
             <div className="project" data-aos="zoom-in">
-              <img src={Ecojobz} alt="Ecojobz" />
+              <img src={Nketsang} alt="Nketsang" />
               <div className="content">
-                <h5>Ecojobz</h5>
-                <div className="brand">Job Board</div>
+                <h5>Nketsang</h5>
+                <div className="brand">Investment Firm</div>
                 <p>
-                  Get applications from the best freelancers and creatives
-                  worldwide when you list and feature your jobs on Ecojobz.
+                  Collaborate with us for more than just capital – gain a strategic ally invested in your success when you partner with us.
                 </p>
                 <a
                   className="link"
@@ -39,7 +42,7 @@ const PortfolioSection = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Visit Ecojobz
+                  Visit Nketsang Ventures
                 </a>
               </div>
             </div>
@@ -86,13 +89,12 @@ const PortfolioSection = () => {
             </div>
 
             <div className="project" data-aos="zoom-in" data-aos-delay="1200">
-              <img src={Ecotix} alt="Ecotix" />
+              <img src={Fraqvest} alt="Fraqvest" />
               <div className="content">
-                <h5>Ecotix</h5>
-                <div className="brand">Event Ticketing</div>
+                <h5>Fraqvest</h5>
+                <div className="brand">Real Estate</div>
                 <p>
-                  Create and sell your event tickets from the comfort of your
-                  phone.
+                  With Fraqvest, experience the power of owning fractional shares in prime global real estate properties, allowing you to build and grow a prosperous portfolio filled with stable, appreciating assets.
                 </p>
                 <a
                   className="link"
@@ -100,27 +102,7 @@ const PortfolioSection = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Visit Ecotix
-                </a>
-              </div>
-            </div>
-
-            <div className="project" data-aos="zoom-in" data-aos-delay="1600">
-              <img src={Ecotourz} alt="Ecotourz" />
-              <div className="content">
-                <h5>Ecotourz</h5>
-                <div className="brand">Travel & Tourism</div>
-                <p>
-                  Technology Driven Online Travel Company Curating & Crafting
-                  Itineraries Worth Your Time, Taste & Budget.
-                </p>
-                <a
-                  className="link"
-                  href={ecotourzLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Visit Ecotourz
+                  Visit Fraqvest
                 </a>
               </div>
             </div>
