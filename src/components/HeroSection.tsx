@@ -24,14 +24,13 @@ const HeroSection = () => {
           className="hero-icon-star"
         />
         <div className="hero-content">
-          <h1>Building innovation. Ideation to scaling. Driving success.</h1>
+          <h1>Fostering Innovation.<br/>From Ideation to scaling.<br/>Paving the Path to Success.</h1>
           <p>
-            We’re building a portfolio of start-ups with a mission to turn
-            Africa’s problems into global solutions.
+            Building products with a Mission to Transform Africa's Challenges into Global Solutions.
           </p>
           <div className="call-to-action">
             <Link to="/contact" className="contact">
-              Get in touch
+              Let's Talk
             </Link>
             <Link to="/portfolio" className="view-works">
               Portfolio

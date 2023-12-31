@@ -1,4 +1,4 @@
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 768px) {
   nav {
     .nav-item-container {
       .nav-item-list {
@@ -101,6 +101,12 @@
       margin: 1.6rem auto;
       font-size: $subtitle-text;
       text-align: start;
+    }
+
+    .box-group {
+      margin: auto 1rem;
+      @include flexItem(column, start);
+      align-items: start;
     }
 
     .about-ecolabz {

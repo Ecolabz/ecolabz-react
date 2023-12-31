@@ -1,4 +1,4 @@
-@media screen and(max-width: 480px) {
+@media screen and (max-width: 480px) {
   nav {
     .nav-item-container {
       .nav-item-list {
@@ -324,6 +324,10 @@
       .text-lead {
         width: 100%;
       }
+    }
+
+    .form-check-group {
+      grid-template-columns: repeat(1, 1fr);
     }
 
     .form-group {
