@@ -116,7 +116,7 @@ nav .nav-item-container .nav-item-list .nav-item .nav-link {
 nav .nav-item-container .nav-item-list .nav-item .nav-link.active {
   color: #12b76a;
 }
-nav .nav-item-container .nav-item-list .nav-item:nth-of-type(6) .nav-link {
+nav .nav-item-container .nav-item-list .nav-item:last-of-type .nav-link {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -126,12 +126,14 @@ nav .nav-item-container .nav-item-list .nav-item:nth-of-type(6) .nav-link {
   padding: 0.45rem 1rem;
   border: 1px solid #12b76a;
   border-radius: 8px;
-  color: #12b76a;
+  background: #12b76a;
+  color: #fff;
 }
-nav .nav-item-container .nav-item-list .nav-item:nth-of-type(6) .nav-link.active {
-  color: #12b76a;
+nav .nav-item-container .nav-item-list .nav-item:last-of-type .nav-link.active {
+  background-color: #0e9a59;
+  color: #fff;
 }
-nav .nav-item-container .nav-item-list .nav-item:nth-of-type(6) .nav-link img {
+nav .nav-item-container .nav-item-list .nav-item:last-of-type .nav-link img {
   margin-left: 0.4rem;
 }
 nav .nav-item-container .menu-btn {
@@ -151,28 +153,12 @@ nav .nav-item-container .menu-btn {
   z-index: 6;
   width: 22rem;
 }
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes pulse {
-  0% {
-    transform: scale(0.7) translate(-50%, -90%);
-  }
-  100% {
-    transform: scale(1.2) translate(-50%, -90%);
   }
 }
 @keyframes pulse {
@@ -189,8 +175,7 @@ nav .nav-item-container .menu-btn {
   left: 7%;
   z-index: 7;
   width: 2rem;
-  -webkit-animation: rotate 5s linear infinite;
-          animation: rotate 5s linear infinite;
+  animation: rotate 5s linear infinite;
 }
 .hero-section .hero-icon-subtract-end {
   position: absolute;
@@ -198,8 +183,7 @@ nav .nav-item-container .menu-btn {
   right: 7%;
   z-index: 7;
   width: 1rem;
-  -webkit-animation: rotate 5s linear infinite;
-          animation: rotate 5s linear infinite;
+  animation: rotate 5s linear infinite;
 }
 .hero-section .hero-icon-star {
   position: absolute;
@@ -208,27 +192,28 @@ nav .nav-item-container .menu-btn {
   transform: translate(-50%, -90%);
   z-index: 7;
   width: 5rem;
-  -webkit-animation: pulse 5s linear infinite;
-          animation: pulse 5s linear infinite;
+  animation: pulse 5s linear infinite;
 }
 .hero-section .hero-content {
   padding: 5rem 0;
   position: relative;
   z-index: 10;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
 }
 .hero-section .hero-content h1 {
   margin-top: 4rem;
-  font-size: 60px;
+  font-size: 50px;
   font-family: "InterExtraBold";
   color: #0F0F0F;
 }
 .hero-section .hero-content p {
   margin-top: 1.8rem;
-  font-size: 20px;
+  font-size: 18px;
   color: #3e3e3e;
+  width: 70%;
+  margin: 0 auto;
 }
 .hero-section .hero-content .call-to-action {
   margin-top: 3.7rem;
@@ -277,9 +262,26 @@ nav .nav-item-container .menu-btn {
 .about-section .subtitle-text {
   width: 50%;
   margin: 1.6rem auto;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   color: #fff;
+}
+.about-section .box-group {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.about-section .box-group .box {
+  padding: 1em;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
 }
 .about-section .about-ecolabz {
   color: #fff;
@@ -305,6 +307,7 @@ nav .nav-item-container .menu-btn {
   color: #fff;
   font-size: 1em;
   margin-top: 1rem;
+  text-align: justify;
 }
 
 /**************************/
@@ -317,13 +320,13 @@ nav .nav-item-container .menu-btn {
 }
 .portfolio-section .our-projects {
   color: #12b76a;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.1px;
 }
 .portfolio-section h2 {
   margin: 1rem auto 7rem auto;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bolder;
 }
 .portfolio-section h2 .box {
@@ -337,7 +340,7 @@ nav .nav-item-container .menu-btn {
 }
 .portfolio-section .subtitle-text {
   margin: 1.6rem 0 5rem 0;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   color: #0a0a0a;
 }
@@ -349,7 +352,7 @@ nav .nav-item-container .menu-btn {
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 .portfolio-section .portfolio-container .row-item .project {
@@ -374,11 +377,7 @@ nav .nav-item-container .menu-btn {
 .portfolio-section .portfolio-container .row-item .content .brand {
   border-bottom: 1px solid #12b76a;
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   margin: 0.6rem 0;
 }
@@ -428,6 +427,7 @@ nav .nav-item-container .menu-btn {
 .tech-stack .tech-stack-container .item img {
   width: 100%;
   height: 3rem;
+  filter: grayscale(1);
 }
 
 /**************************/
@@ -448,7 +448,7 @@ nav .nav-item-container .menu-btn {
 .contact-section .subtitle-text {
   width: 39%;
   margin: 1.8rem auto 0 auto;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   color: #fff;
 }
@@ -481,13 +481,13 @@ nav .nav-item-container .menu-btn {
 }
 .about-us-page .about-ecolabz {
   color: #12b76a;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.1px;
 }
 .about-us-page .content {
   margin: 3rem auto;
-  font-size: 20px;
+  font-size: 18px;
 }
 .about-us-page .content .text-lead {
   width: 65%;
@@ -525,18 +525,18 @@ nav .nav-item-container .menu-btn {
 }
 .contact-page .contact-us {
   color: #12b76a;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.1px;
 }
 .contact-page h2 {
   margin: 1rem auto;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bolder;
 }
 .contact-page .box-content {
   margin: 2rem auto;
-  font-size: 20px;
+  font-size: 18px;
 }
 .contact-page .box-content .text-lead {
   color: #3e3e3e;
@@ -552,6 +552,32 @@ nav .nav-item-container .menu-btn {
   border-radius: 8px;
   font-size: 0.875rem;
   line-height: 1.5rem;
+}
+.contact-page .form-check-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+.contact-page .form-check-group .form-check {
+  padding-left: 0;
+}
+.contact-page .form-check-group .form-check-label {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+  background-color: #E1E1E1;
+  border-radius: 8px;
+  padding-left: 1rem;
+}
+.contact-page .form-check-group .form-check-label .form-check-input {
+  margin-left: 0;
+  border: 1px solid #0e9a59;
+}
+.contact-page .form-check-group .form-check-label .form-check-input:checked {
+  background-color: #0e9a59;
+}
+.contact-page .form-check-group .form-check-label .form-check-input:focus {
+  outline: 0;
 }
 .contact-page .form-control-textarea {
   width: 100%;
@@ -576,18 +602,18 @@ nav .nav-item-container .menu-btn {
 /**************************/
 .team-page {
   padding: 5rem 0;
-  width: 87%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 .team-page .our-team {
   color: #12b76a;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.1px;
 }
 .team-page h2 {
   margin: 1rem auto;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bolder;
 }
 .team-page .content {
@@ -596,7 +622,7 @@ nav .nav-item-container .menu-btn {
 }
 .team-page .content p {
   margin-top: 1rem;
-  font-size: 20px;
+  font-size: 18px;
   color: #3e3e3e;
 }
 .team-page h3 {
@@ -625,7 +651,7 @@ nav .nav-item-container .menu-btn {
   justify-content: center;
   flex-wrap: wrap;
 }
-.team-page .card-container .card img {
+.team-page .card-container .card .profile-img {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
@@ -900,12 +926,6 @@ footer .about .newsletter-section .row-item .input-box .custom-input {
   background-color: #0F0F0F;
   color: #fff;
 }
-footer .about .newsletter-section .row-item .input-box .custom-input::-moz-placeholder {
-  font-size: 1em;
-}
-footer .about .newsletter-section .row-item .input-box .custom-input:-ms-input-placeholder {
-  font-size: 1em;
-}
 footer .about .newsletter-section .row-item .input-box .custom-input::placeholder {
   font-size: 1em;
 }
@@ -1071,7 +1091,7 @@ footer .all-rights-reserved span {
   .team-page .card-container .card {
     width: 25%;
   }
-  .team-page .card-container .card img {
+  .team-page .card-container .card .profile-img {
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
@@ -1086,7 +1106,7 @@ footer .all-rights-reserved span {
     margin: 0.1rem auto 0rem auto;
   }
   .card-table .header,
-.card-table .sub-text {
+  .card-table .sub-text {
     font-size: 1.1em;
   }
   .card-table .header-container {
@@ -1214,7 +1234,7 @@ footer .all-rights-reserved span {
   }
   nav .nav-item-container .nav-item-list.active .nav-item .nav-link {
     margin: 0rem;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
     font-weight: bold;
   }
@@ -1265,7 +1285,7 @@ footer .all-rights-reserved span {
     transition: all 0.5s ease-in-out;
   }
   nav .nav-item-container .menu-btn__burger::before,
-nav .nav-item-container .menu-btn__burger::after {
+  nav .nav-item-container .menu-btn__burger::after {
     content: "";
     position: absolute;
     width: 35px;
@@ -1336,7 +1356,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .hero-section .hero-content p {
     margin-top: 1.5rem;
-    font-size: 20px;
+    font-size: 18px;
   }
   .hero-section .hero-content .call-to-action {
     margin-top: 2rem;
@@ -1377,7 +1397,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .portfolio-section .our-projects {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .portfolio-section h2 {
@@ -1393,7 +1413,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .portfolio-section .subtitle-text {
     margin: 1.6rem 0 5rem 0;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
   }
   .portfolio-section .portfolio-container {
@@ -1441,7 +1461,7 @@ nav .nav-item-container .menu-btn__burger::after {
   .contact-section .subtitle-text {
     width: 50%;
     margin: 1.8rem auto 0 auto;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
   }
   .contact-section .call-to-action {
@@ -1466,7 +1486,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .about-us-page .about-ecolabz {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .about-us-page .content {
@@ -1499,7 +1519,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .team-page .our-team {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .team-page h2 {
@@ -1565,7 +1585,7 @@ nav .nav-item-container .menu-btn__burger::after {
     margin: 0.1rem auto 0rem auto;
   }
   .card-table .header,
-.card-table .sub-text {
+  .card-table .sub-text {
     font-size: 1.1em;
   }
   .card-table .header-container {
@@ -1689,7 +1709,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .hero-section .hero-content p {
     margin-top: 1.5rem;
-    font-size: 20px;
+    font-size: 18px;
   }
   .hero-section .hero-content .call-to-action {
     margin-top: 2rem;
@@ -1727,8 +1747,17 @@ nav .nav-item-container .menu-btn__burger::after {
   .about-section .subtitle-text {
     width: 96%;
     margin: 1.6rem auto;
-    font-size: 20px;
+    font-size: 18px;
     text-align: start;
+  }
+  .about-section .box-group {
+    margin: auto 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: start;
   }
   .about-section .about-ecolabz {
     width: 90%;
@@ -1758,7 +1787,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .portfolio-section .our-projects {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .portfolio-section h2 {
@@ -1774,7 +1803,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .portfolio-section .subtitle-text {
     margin: 1.6rem auto 5rem auto;
-    font-size: 20px;
+    font-size: 18px;
     text-align: start;
   }
   .portfolio-section .portfolio-container {
@@ -1841,7 +1870,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .about-us-page .about-ecolabz {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .about-us-page .content {
@@ -1875,7 +1904,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .contact-page .contact-us {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .contact-page h2 {
@@ -1893,7 +1922,7 @@ nav .nav-item-container .menu-btn__burger::after {
     margin-top: 0.5rem;
   }
   .contact-page .form-control-input,
-.contact-page .form-control-textarea {
+  .contact-page .form-control-textarea {
     width: 100%;
     border-radius: 8px;
     font-size: 0.875rem;
@@ -1917,7 +1946,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .team-page .our-team {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .team-page h2 {
@@ -1981,7 +2010,7 @@ nav .nav-item-container .menu-btn__burger::after {
     margin: 0.1rem auto 0rem auto;
   }
   .card-table .header,
-.card-table .sub-text {
+  .card-table .sub-text {
     font-size: 1.1em;
   }
   .card-table .header-container {
@@ -2112,7 +2141,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .hero-section .hero-content p {
     margin-top: 1.5rem;
-    font-size: 20px;
+    font-size: 18px;
   }
   .hero-section .hero-content .call-to-action {
     margin-top: 2rem;
@@ -2182,7 +2211,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .portfolio-section .our-projects {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .portfolio-section h2 {
@@ -2290,7 +2319,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .about-us-page .about-ecolabz {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .about-us-page .content {
@@ -2323,7 +2352,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .contact-page .contact-us {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .contact-page h2 {
@@ -2337,11 +2366,14 @@ nav .nav-item-container .menu-btn__burger::after {
   .contact-page .box-content .text-lead {
     width: 100%;
   }
+  .contact-page .form-check-group {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .contact-page .form-group {
     margin-top: 0.5rem;
   }
   .contact-page .form-control-input,
-.contact-page .form-control-textarea {
+  .contact-page .form-control-textarea {
     border-radius: 8px;
     font-size: 0.875rem;
     line-height: 1.5rem;
@@ -2364,7 +2396,7 @@ nav .nav-item-container .menu-btn__burger::after {
   }
   .team-page .our-team {
     margin: 1.3rem auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
   .team-page h2 {
@@ -2426,7 +2458,7 @@ nav .nav-item-container .menu-btn__burger::after {
     margin: 0.1rem auto 0rem auto;
   }
   .card-table .header,
-.card-table .sub-text {
+  .card-table .sub-text {
     font-size: 1.1em;
   }
   .card-table .header-container {
@@ -2515,4 +2547,6 @@ nav .nav-item-container .menu-btn__burger::after {
     width: 95%;
     margin: 0 auto;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
