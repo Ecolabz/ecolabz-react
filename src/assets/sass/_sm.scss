@@ -103,6 +103,12 @@
       text-align: start;
     }
 
+    .box-group {
+      margin: auto 1rem;
+      @include flexItem(column, start);
+      align-items: start;
+    }
+
     .about-ecolabz {
       width: 90%;
       margin: 0 auto;
