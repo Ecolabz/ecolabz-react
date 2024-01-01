@@ -1701,7 +1701,7 @@ footer .all-rights-reserved span {
     z-index: 10;
     width: 90%;
     margin: 0 auto;
-    text-align: start;
+    text-align: center;
   }
   .hero-section .hero-content h1 {
     margin-top: 6.7rem;
@@ -2142,6 +2142,7 @@ footer .all-rights-reserved span {
   .hero-section .hero-content p {
     margin-top: 1.5rem;
     font-size: 18px;
+    margin: 0;
   }
   .hero-section .hero-content .call-to-action {
     margin-top: 2rem;
